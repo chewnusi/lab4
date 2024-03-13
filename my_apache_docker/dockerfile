@@ -1,0 +1,8 @@
+# Використання базового образу Ubuntu
+FROM ubuntu
+
+# Оновлення пакетів та встановлення Apache2
+RUN apt-get update && apt-get install -y apache2
+
+# Команди, які будуть виконані при запуску контейнера
+CMD ["apache2ctl", "-D", "FOREGROUND"]
